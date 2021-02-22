@@ -1,0 +1,14 @@
+%module goexiv2
+%{
+#include <exiv2/exiv2.hpp>
+%}
+
+
+namespace Exiv2 {
+    int versionNumber();
+    std::string versionString();
+    std::string versionNumberHexString();
+    const char* version();
+    bool testVersion(int major, int minor, int patch);
+    void dumpLibraryInfo(std::ostream& os,const exv_grep_keys_t& keys);
+}
